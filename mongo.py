@@ -1,6 +1,6 @@
 import os
 import pymongo
-if os.path.exists("env.py"):
+if os.path.exists('env.py'):
     import env
 
 
@@ -23,3 +23,6 @@ conn = mongo_connect(MONGO_URI)
 coll = conn[DATABASE][COLLECTION]
 
 documents = coll.find()
+
+for doc in documents:
+    print(doc)
